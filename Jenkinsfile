@@ -8,19 +8,19 @@ pipeline {
       stage(“Build”){
           steps{
               echo 'step 1'
-              sleep 3
+              sh 'mvn compile'
           }
       }
       stage(“Test”){
           steps{
               echo 'step 2'
-              sleep 9
+              sh 'mvn compile'
           }
       }
       stage(“Package”){
           steps{
               echo 'step 3'
-              sleep 5
+              sh 'mvn compile'
           }
       }
   }
