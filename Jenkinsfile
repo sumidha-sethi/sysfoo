@@ -14,13 +14,13 @@ pipeline {
       stage(“Test”){
           steps{
               echo 'step 2'
-              sh 'mvn compile '
+              sh 'mvn clean test'
           }
       }
       stage(“Package”){
           steps{
               echo 'step 3'
-              sh 'mvn compile '
+              sh 'mvn package -DskipTests '
           }
       }
   }
